@@ -17,7 +17,9 @@ jobs:
         working-directory: ./client
 
       - name: Build project
-        run: npm run build
+        run: |
+          echo "VITE_BACKEND_URL=${{ secrets.VITE_BACKEND_URL }}" > .env
+          npm run build
         working-directory: ./client
 
       - name: Deploy to Firebase Hosting
