@@ -15,7 +15,8 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedOrigins(
                         "http://localhost:5173",
                         "https://ecommerce-d6069.web.app",
-                        "https://ecommerce-d6069.firebaseapp.com"
+                        "https://ecommerce-d6069.firebaseapp.com",
+                        "https://mellow-beignet-188331.netlify.app"
                 ) // your frontend origin
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")

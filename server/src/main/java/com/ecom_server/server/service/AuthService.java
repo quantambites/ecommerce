@@ -6,6 +6,8 @@ import com.ecom_server.server.service.helper.JwtUtil;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseCookie;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -44,11 +46,15 @@ public class AuthService {
         }
 
         String token = jwtUtil.generateToken(user.getId(), user.getRole(), user.getEmail(), user.getUserName());
-        Cookie cookie = new Cookie("token", token);
-        cookie.setHttpOnly(true);
-        cookie.setPath("/");
-        response.addCookie(cookie);
+        ResponseCookie cookie = ResponseCookie.from("token", token)
+                .httpOnly(true)
+                .secure(true)
+                .sameSite("None")
+                .path("/")
+                .maxAge(7 * 24 * 60 * 60) // 7 days
+                .build();
 
+        response.setHeader(HttpHeaders.SET_COOKIE, cookie.toString());
         return user;
     }
 
