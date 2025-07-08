@@ -39,11 +39,10 @@ It is composed of:
 ### 📦 Backend Setup (Spring Boot)
 
 1. Clone the repo:
-     ```bash
-     git clone https://github.com/quantambites/ecommerce.git
-     cd ecommerce/server
-     ```
-
+   ```bash
+   git clone https://github.com/quantambites/ecommerce.git
+   cd ecommerce/server
+   ```
 
 2. Install dependencies and run:
    - Using Maven:
@@ -152,7 +151,7 @@ ecommerce/
 
 
 
----
+
 
 <p align="center">
   <img src="Screenshot 2025-07-09 012750.png" alt="App Screenshot" width="500"/>
