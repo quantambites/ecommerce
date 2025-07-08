@@ -15,7 +15,7 @@ Ecommerce is a full-stack cloud-based shopping platform allowing users to regist
   - [Backend `application.properties`](#backend-applicationproperties)
 - [📂 Project Structure](#-project-structure)
 - [🛠️ Technologies Used](#️-technologies-used)
-
+- [🔗 Live Project](#-live-project)
 ---
 
 ## ✨ Introduction
@@ -39,9 +39,10 @@ It is composed of:
 ### 📦 Backend Setup (Spring Boot)
 
 1. Clone the repo:
-   ```bash
-   git clone https://github.com/quantambites/ecommerce.git
-   cd ecommerce/server
+     ```bash
+     git clone https://github.com/quantambites/ecommerce.git
+     cd ecommerce/server
+     ```
 
 
 2. Install dependencies and run:
@@ -144,3 +145,15 @@ ecommerce/
 
 
 ---
+### 🔗 Live Project
+
+[https://ecommerce-d6069.firebaseapp.com/](https://ecommerce-d6069.firebaseapp.com/)
+
+
+
+
+---
+
+<p align="center">
+  <img src="Screenshot 2025-07-09 012750.png" alt="App Screenshot" width="500"/>
+</p>
